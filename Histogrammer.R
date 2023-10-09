@@ -28,7 +28,7 @@ rem_goals_time <- goals %>%
   mutate(cum_goals = cumsum(goals)) %>%
   mutate(rem_goals = max(cum_goals)-cum_goals) %>%
   mutate(rem_time = 90-time) %>%
-  filter(rem_time >=0)
+  filter(rem_time >= 0)
 
   rem_goals_time %>% 
   ggplot()+
